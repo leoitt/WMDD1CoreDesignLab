@@ -1,0 +1,50 @@
+@*
+ * This template is called from the `index` template. This template
+ * handles the rendering of the page header and body tags. It takes
+ * two arguments, a `String` for the title of the page and an `Html`
+ * object to insert into the body of the page.
+ *@
+@(pageID: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en" id="@pageID">
+    <head>
+        <title>Core Design - @pageID</title>
+        <!--Generate links to css files-->
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.versioned("stylesheets/Style.css")">
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.versioned("stylesheets/Form.css")">
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+    </head>
+    <body>
+        <div id="Container">
+            <div id="Logo">
+                <h1>Core Design</h1>
+                <h3>
+                    <em>Website Design and Development Services</em>
+                </h3>
+            </div>
+            <div id="Navigation">
+                <ul>
+                    <li><a href="@routes.Application.index()" class="home">Home</a></li>
+                    <li><a href="@routes.Application.about()" class="about">About Us</a></li>
+                    <li><a href="@routes.Application.services()" class="services">Services</a></li>
+                    <li><a href="@routes.Application.clients()" class="clients">Clients</a></li>
+                    <li><a href="@routes.Application.contact()" class="contact">Contact us</a></li>
+                </ul>
+            </div>
+            <div id="Content">
+                @content
+            </div>
+            <div id="Footer">
+                <h6>
+                    <em>Copyright &copy; 2015 Core Design</em>
+                </h6>
+            </div>
+        
+        </div>
+        
+
+        <!--<script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>-->
+    </body>
+</html>
