@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/playapps/WMDD1CoreDesignLab/app/views/contact.scala.html:28:22: not found: value us[0m
+[0m[[0m[31merror[0m] [0m[0m      <td>play.withe@us.ie</td>[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
